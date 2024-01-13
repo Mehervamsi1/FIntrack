@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'expenses'
 ]
 
 MIDDLEWARE = [
@@ -75,24 +76,25 @@ WSGI_APPLICATION = 'fintrack.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    '''
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'fintrackdb',
-        'USER': 'postgres',
-        'PASSWORD': 'postdb',
-        'HOST': 'localhost'
-        
-    } '''
     
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ.get('DB_NAME'),
-        'USER': os.environ.get('DB_USER'),
-        'PASSWORD': os.environ.get('DB_USER_PASSWORD'),
-        'HOST': os.environ.get('DB_HOST')
+        'NAME': 'fintrackdbnew',
+        'USER': 'postgres',
+        'PASSWORD': 'password',
+        'HOST': 'localhost'
+        #'PORT': '5432'
         
-    }
+    } 
+    
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.postgresql',
+    #     'NAME': os.environ.get('DB_NAME'),
+    #     'USER': os.environ.get('DB_USER'),
+    #     'PASSWORD': 'password', #os.environ.get('DB_USER_PASSWORD'),
+    #     'HOST': os.environ.get('DB_HOST')
+        
+    # }
     
     
 }
@@ -133,6 +135,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
+SATTICFILES_DIRS = [os.path.join(BASE_DIR),'fintrack/static']
+STATIC_ROOT = os.path.join(BASE_DIR,'static')
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
