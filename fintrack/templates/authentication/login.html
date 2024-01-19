@@ -1,16 +1,69 @@
 {% extends 'base_auth.html' %}
 
 {% block content%}
+<head>
+    <style>
+.login,
+.image {
+  min-height: 100vh;
+}
 
-<div class="card">
+.bg-image {
+  background-image: url('https://lh7-us.googleusercontent.com/Lw5u8-TZv01ZVjdodZT3_YZWtLVMz7edUWFr0DBwmcEfm6W6LUKAcA-LLMxJ6vu7xEI3xvUcq19IJje8Cs1rScp8zLbsU6IsAvdC858TFpHAEcti0CxDojv_0c86Hzpwk0yjUgKmcW5omoRK');
+  background-size: cover;
+  background-position: center center;
+}
+
+body{
+    font-family: 'Oxygen', sans-serif;
+}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<div class="container-fluid">
+    <div class="row no-gutter">
+        <!-- The image half -->
+        <div class="col-md-6 d-none d-md-flex bg-image"></div>
 
 
-    <div class="card-body">
+        <!-- The content half -->
+        <div class="col-md-6 bg-light">
+            <div class="login d-flex align-items-center py-5">
 
-<h1> Login </h1>
+                <!-- Demo content-->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-10 col-xl-7 mx-auto">
+                            <h3 class="display-4">FINTRACK</h3>
+                            <h6 class="display-6">Login to your Account</h6>
+                            
+                            <form>
+                                <div class="form-group mb-3">
+                                    <input id="emailId" type="email" placeholder="Email address" required="" autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4">
+                                </div>
+                                <div class="form-group mb-3">
+                                    <input id="password" type="password" placeholder="Password" required="" class="form-control rounded-pill border-0 shadow-sm px-4 text-primary">
+                                </div>
+                                <div class="custom-control custom-checkbox mb-3">
+                                    <input id="customCheck1" type="checkbox" checked class="custom-control-input">
+                                    <label for="customCheck1" class="custom-control-label">Remember password</label>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-block text-uppercase mb-2 rounded-pill shadow-sm">Sign in</button>
+                            
+                            </form>
+                        </div>
+                    </div>
+                </div><!-- End -->
+
+            </div>
+        </div><!-- End -->
 
     </div>
-
 </div>
+</body>
 
 {% endblock content%}
