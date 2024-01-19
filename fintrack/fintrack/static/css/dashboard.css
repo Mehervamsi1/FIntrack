@@ -22,15 +22,10 @@
 .sidebar .nav-link {
   font-size: .875rem;
   font-weight: 500;
-  height:  100%;
-  position: absolute;
-
 }
 
 .sidebar .nav-link.active {
   color: #2470dc;
-  height:  100%;
-  position: absolute;
 }
 
 .sidebar-heading {
@@ -46,7 +41,6 @@
   padding-bottom: .75rem;
   background-color: rgba(0, 0, 0, .25);
   box-shadow: inset -1px 0 0 rgba(0, 0, 0, .25);
-  overflow: auto;
 }
 
 .navbar .form-control {
